@@ -50,3 +50,9 @@ Or dashboard:
 	open http://127.0.0.1:8001/ui
 
 TODO: add kafka commands
+
+Documentation
+
+- [Apache Kafka](http://kafka.apache.org/documentation/)
+- [Confluent](https://docs.confluent.io/current/)
+- [ZooKeeper](https://zookeeper.apache.org/doc/current/)
