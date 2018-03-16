@@ -29,7 +29,12 @@ Install Kafka test client:
 
 	kubectl apply -f kafka-tunnel.yaml
 
+Install Kubernetes dashboard (if needed):
+
 	kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+
+Start Kubernetes dashboard:
+
 	kubectl proxy
 
 Check status:
