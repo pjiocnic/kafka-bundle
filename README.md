@@ -9,6 +9,8 @@ In Docker for Mac, set resources available to Docker to at least:
 
 Setup:
 
+	git clone https://github.com/astronomerio/kafka-k8s.git
+
 	mkdir kafka-k8s && cd kafka-k8s
 
 	helm init
