@@ -17,11 +17,11 @@ Setup:
 
 Install ZooKeeper:
 
-	helm install --set resources.limits.memory=1Gi --set resources.requests.memory=0.5Gi --name myzk incubator/zookeeper
+	helm install --set resources.limits.memory=1Gi --set resources.requests.memory=0.5Gi --name myzk zookeeper
 
 Install Kafka:
 
-	helm install --name my-kafka incubator/kafka
+	helm install --name my-kafka kafka
 
 	# TODO: override kafka memory settings?
 
