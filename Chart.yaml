@@ -1,0 +1,6 @@
+name: kafka-bundle
+version: 0.0.1
+description: Helm chart to deploy Kafka and related tooling
+keywords:
+  - kafka
+  - zookeeper

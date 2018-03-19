@@ -1,0 +1,7 @@
+kafka:
+  enabled: true
+  version: 0.4.3
+  persistence:
+    size: 50Gi
+  zookeeper:
+    enabled: false
