@@ -3,4 +3,9 @@ dependencies:
     condition: global.modules.kafka.enabled
     version: 0.4.3
     repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+  
+  - name: kafkaClient
+    condition: global.modules.kafkaClient.enabled
+    version: 0.0.0
+
     

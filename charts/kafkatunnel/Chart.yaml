@@ -1,0 +1,7 @@
+name: kafkaClient
+version: 0.0.0
+description: Helm chart to deploy Kafka tunnel client
+keywords:
+  - kafka
+  - zookeeper
+  - client

@@ -1,0 +1,5 @@
+globals:
+  modules:
+    kafkaClient:
+      # Enable or Disable kafka test client
+      enabled: true
