@@ -27,13 +27,13 @@ kafka:
 
   ## Configure resource requests and limits
   ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
-  resources: {}
-    # limits:
-    #   cpu: 200m
-    #   memory: 1536Mi
-    # requests:
-    #   cpu: 100m
-    #   memory: 1024Mi
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1536Mi
+    requests:
+      cpu: 100m
+      memory: 1024Mi
 
   ## The StatefulSet Update Strategy which Kafka will use when changes are applied.
   ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies
