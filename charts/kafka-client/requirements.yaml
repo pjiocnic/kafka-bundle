@@ -1,5 +1,0 @@
-dependencies:
-- name: kafka
-  version: 0.4.2
-  repository: "file://../kafka"
-  condition: global.modules.kafkaClient.enabled
