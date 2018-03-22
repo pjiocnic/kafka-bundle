@@ -5,7 +5,7 @@ description: A tool for managing Apache Kafka.
 home: https://github.com/yahoo/kafka-manager
 icon: https://kafka.apache.org/images/logo.png
 sources:
-  - https://github.com/yahoo/kafka-manager
+- https://github.com/yahoo/kafka-manager
 keywords:
 - kafka
 - zookeeper
