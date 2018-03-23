@@ -66,6 +66,12 @@ Start a producer to send messages to a topic:
 
 	kubectl -n default exec -ti testclient -- /usr/bin/kafka-console-producer --broker-list my-kafka-kafka-headless:9092 --topic test1
 
+## ZooKeeper Resources
+
+- Netflix Exhibitor - https://github.com/soabase/exhibitor
+- Apache Curator (was Netflix Curator) - http://curator.apache.org
+	- https://medium.com/netflix-techblog/introducing-curator-the-netflix-zookeeper-library-c814d3f4917c
+
 ## Documentation
 
 - [Apache Kafka](http://kafka.apache.org/documentation/)
