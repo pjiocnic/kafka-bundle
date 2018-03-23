@@ -1,0 +1,79 @@
+global:
+  modules:
+    kafka:
+      enabled: true
+    zookeeper:
+      enabled: true
+    ## Should not be enabled if external is set to true	
+    kafkaClient:
+      enabled: false
+
+# ------------------------------------------------------------------------------
+# Kafka:
+# ------------------------------------------------------------------------------
+kafka:
+  ## External access.
+  external:
+    enabled: true
+    servicePort: 19092
+    firstListenerPort: 31090
+    domain: cluster.local
+    init:
+      image: "lachlanevenson/k8s-kubectl"
+      imageTag: "v1.9.3"
+      imagePullPolicy: "IfNotPresent"
+
+  ## The StatefulSet installs 3 pods by default
+  replicas: 3
+
+  ## Configure resource requests and limits
+  ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1536Mi
+    requests:
+      cpu: 100m
+      memory: 1024Mi
+
+  ## Persistence configuration. Specify if and how to persist data to a persistent volume.
+  ##
+  persistence:
+    enabled: true
+
+    ## The size of the PersistentVolume to allocate to each Kafka Pod in the StatefulSet. For
+    ## production servers this number should likely be much larger.
+    ##
+    size: "1Gi"
+
+    ## The location within the Kafka container where the PV will mount its storage and Kafka will
+    ## store its logs.
+    ##
+    mountPath: "/opt/kafka/data"
+
+  # ------------------------------------------------------------------------------
+  # Zookeeper:
+  # ------------------------------------------------------------------------------
+
+  zookeeper:
+    ## If true, install the Zookeeper chart alongside Kafka
+    ## ref: https://github.com/kubernetes/charts/tree/master/incubator/zookeeper
+    enabled: true
+
+    ## Configure Zookeeper resource requests and limits
+    ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+    resources: {}
+
+    ## The JVM heap size to allocate to Zookeeper
+    heap: "1G"
+
+    ## The amount of PV storage allocated to each Zookeeper pod in the statefulset
+    storage: "2Gi"
+
+    ## Specify a Zookeeper imagePullPolicy
+    ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+    imagePullPolicy: "IfNotPresent"
+
+    ## If the Zookeeper Chart is disabled a URL and port are required to connect
+    url: ""
+    port: 2181
