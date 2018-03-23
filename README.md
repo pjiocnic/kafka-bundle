@@ -136,6 +136,49 @@ There have been several attempts to run it on Kubernetes but there is not yet a 
 
 - http://www.kafkatool.com
 
+### Misc
+
+#### Kafka System Tools
+
+- https://cwiki.apache.org/confluence/display/KAFKA/System+Tools
+
+#### Kafka REST Proxy
+
+- Not a dashboard itself but opens a RESTful interface to the Kafka cluster instead of using the native Kafka protocol and clients.
+- https://github.com/confluentinc/kafka-rest
+- https://docs.confluent.io/current/kafka-rest/docs/index.html
+
+#### Datadog
+
+- https://www.datadoghq.com/dashboards/kafka-dashboard/
+- How to Monitor Kafka Performance Metrics series (3-part)
+	- [Part 1 - Monitoring Kafka performance metrics](https://www.datadoghq.com/blog/monitoring-kafka-performance-metrics/)
+	- [Part 2 - Collecting Kafka performance metrics](https://www.datadoghq.com/blog/collecting-kafka-performance-metrics/)
+	- [Part 3 - Monitoring Kafka with Datadog](https://www.datadoghq.com/blog/monitor-kafka-with-datadog/)
+
+#### kafka-statsd-metrics2
+
+- https://github.com/airbnb/kafka-statsd-metrics2
+
+#### Prometheus / Grafana
+
+##### Kafka Overview
+
+- https://grafana.com/dashboards/721
+- https://www.robustperception.io/monitoring-kafka-with-prometheus/
+
+##### kafka_exporter
+
+- https://github.com/danielqsj/kafka_exporter
+
+##### JMX Exporter
+
+- https://github.com/prometheus/jmx_exporter
+
+##### kafka-prometheus-monitoring
+
+- https://github.com/rama-nallamilli/kafka-prometheus-monitoring
+
 ### References
 
 - https://www.quora.com/What-are-the-user-interfaces-to-browse-Kafka-topics
