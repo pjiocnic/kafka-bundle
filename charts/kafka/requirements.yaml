@@ -1,5 +1,0 @@
-dependencies:
-- name: zookeeper
-  version: 0.5.0
-  repository: "file://../zookeeper"
-  condition: global.modules.zookeeper.enabled
