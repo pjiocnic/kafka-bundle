@@ -31,10 +31,10 @@ kafka:
   resources:
     limits:
       cpu: 200m
-      memory: 1536Mi
+      memory: "0.5Gi"
     requests:
       cpu: 100m
-      memory: 1024Mi
+      memory: "0.5Gi"
 
   ## Persistence configuration. Specify if and how to persist data to a persistent volume.
   ##
@@ -62,7 +62,13 @@ kafka:
 
     ## Configure Zookeeper resource requests and limits
     ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
-    resources: {}
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "0.5Gi"
+      limits:
+        cpu: 1
+        memory: "0.5Gi"
 
     ## The JVM heap size to allocate to Zookeeper
     heap: "1G"
@@ -77,3 +83,11 @@ kafka:
     ## If the Zookeeper Chart is disabled a URL and port are required to connect
     url: ""
     port: 2181
+
+    persistence:
+      size: "0.5Gi"
+
+# which one ^ v takes precedence?
+zookeeper:
+  persistence:
+    size: "0.4Gi"
