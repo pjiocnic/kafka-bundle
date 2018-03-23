@@ -67,9 +67,89 @@ Start a producer to send messages to a topic:
 	kubectl -n default exec -ti testclient -- /usr/bin/kafka-console-producer --broker-list my-kafka-kafka-headless:9092 --topic test1
 
 ## Kafka Dashboards
+
+There are a large number of dashboards, and more generally, monitoring tools available for Kafka.  There are several options available for Kafka dashboards to monitor many metrics such as topics, brokers, producers, consumers, messages, clients, partitions, etc.  Additionally, there are ZooKeeper monitoring tools that are useful in the context of Kafka.
+
+Kafka monitoring tools fall into 4 different types of components: transport, storage, processing, and visualization.
+
+Some tools are lightweight niche feature-specific tools; some are collections of tools as dedicated dashboards, like Yahoo Kafka Manager; while others are heavyweight comprehensive platforms, like Confluent or Landoop.
+
+These results are aggregated across searching Google, Stack Overflow, etc from the references listed at the bottom of this section.
+
 ### Yahoo Kafka Manager
+
+The [Yahoo Kafka Manager](https://github.com/yahoo/kafka-manager) dashboard provides a popular GUI for managing Kafka clusters.  It does not include a Helm chart or Kubernetes integration out of the box.
+
+There have been several attempts to run it on Kubernetes but there is not yet a stable chart.
+
+- https://github.com/Yolean/kubernetes-kafka/tree/master/yahoo-kafka-manager
+- https://github.com/kubernetes/charts/pull/2917
+	- https://github.com/oleh-ozimok/charts/tree/kafka-manager
+- https://github.com/MacTynow/kafka-manager-chart
+- https://github.com/sheepkiller/kafka-manager-docker
+- https://github.com/nearform/openshift-kafka
+
+### LinkedIn Kafka Monitor
+
+- https://github.com/linkedin/kafka-monitor
+
+### tulinmola/kafka-dashboards
+
+- https://github.com/tulinmola/kafka-dashboards
+
 ### Landoop
+
+#### fast-data-dev
+
+- https://github.com/Landoop/fast-data-dev
+- Includes kafka-topics-ui, schema-registry-ui, kafka-connect-ui, etc
+- http://www.landoop.com/kafka/kafka-tools/
+
+#### Landoop Lenses (license required)
+
+- http://www.landoop.com/kafka-lenses/
+- https://github.com/Landoop/lenses-docker
+- http://lenses.stream
+
 ### Confluent Control Center (paid)
+
+- https://www.confluent.io/product/control-center/
+
+### Symantec Kafka Monitoring Tool
+
+- https://github.com/Symantec/kafka-monitoring-tool
+
+### Kafka Web Console (deprecated)
+
+- https://github.com/claudemamo/kafka-web-console
+
+### Burrow + Burrow Dashboard
+
+- https://github.com/joway/burrow-dashboard
+- https://github.com/linkedin/Burrow
+
+### Apache Zeppelin
+
+- https://zeppelin.apache.org
+
+### Kafka Tool
+
+- http://www.kafkatool.com
+
+### References
+
+- https://www.quora.com/What-are-the-user-interfaces-to-browse-Kafka-topics
+- https://stackoverflow.com/questions/49043596/kafka-monitoring-tool-in-production
+- https://stackoverflow.com/questions/39861823/ui-tool-for-monitoring-kafka
+- https://stackoverflow.com/questions/39015920/basic-kafka-topic-availability-checker
+- https://stackoverflow.com/questions/49276785/monitoring-ui-for-apache-kafka-kafka-manager-vs-kafka-monitor
+- https://stackoverflow.com/questions/29113009/monitoring-kafka-in-python
+- https://stackoverflow.com/questions/45312437/real-time-dash-board-for-kafka
+- https://stackoverflow.com/questions/42629848/apache-kafka-consumer-analytics-platform-visualize-data
+- https://stackoverflow.com/search?q=kafka+dashboard
+- https://www.confluent.io/blog/blog-post-on-monitoring-an-apache-kafka-deployment-to-end-most-blog-posts
+- https://www.nearform.com/blog/benchmarking-apache-kafka-deployed-on-openshift-with-helm/
+
 ## ZooKeeper Resources
 
 - Netflix Exhibitor - https://github.com/soabase/exhibitor
