@@ -31,6 +31,26 @@ Install Kafka test client:
 
 	kubectl apply -f kafka-tunnel.yaml
 
+Install Kafka Manager
+
+	helm install \
+	--set zookeeperHosts="my-kafka-zookeeper:2181" \
+	--set applicationSecret="my-secret" \
+	--set basicAuth.enabled=true \
+	--set basicAuth.username="myuser" \
+	--set basicAuth.password="mypass" \
+	--name my-kafka-manager kafka-manager
+
+Port forward the Kafka Manager dashboard:
+
+	export POD_NAME=$(kubectl get pods --namespace default -l "app=kafka-manager,release=my-kafka-manager" -o jsonpath="{.items[0].metadata.name}")
+
+	kubectl port-forward $POD_NAME 8080:9000
+
+Open the Kafka Manager dashboard in your browser:
+
+	open http://127.0.0.1:8080
+
 Install Kubernetes dashboard (if needed):
 
 	kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
