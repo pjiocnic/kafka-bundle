@@ -33,7 +33,13 @@ Install Kafka test client:
 
 Install Kafka Manager
 
-	helm install --name my-kafka-manager kafka-manager
+	helm install \
+	--set zookeeperHosts="my-kafka-zookeeper:2181" \
+	--set applicationSecret="my-secret" \
+	--set basicAuth.enabled=true \
+	--set basicAuth.username="myuser" \
+	--set basicAuth.password="mypass" \
+	--name my-kafka-manager kafka-manager
 
 Port forward the Kafka Manager dashboard:
 
