@@ -66,6 +66,10 @@ Start a producer to send messages to a topic:
 
 	kubectl -n default exec -ti testclient -- /usr/bin/kafka-console-producer --broker-list my-kafka-kafka-headless:9092 --topic test1
 
+## Kafka Dashboards
+### Yahoo Kafka Manager
+### Landoop
+### Confluent Control Center (paid)
 ## ZooKeeper Resources
 
 - Netflix Exhibitor - https://github.com/soabase/exhibitor
