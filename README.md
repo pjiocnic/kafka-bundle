@@ -1,5 +1,6 @@
-Kafka on Kubernetes MVP
-=======================
+# Kafka on Kubernetes MVP
+
+## Kafka & ZooKeeper
 
 In Docker for Mac, set resources available to Docker to at least:
 
@@ -65,7 +66,7 @@ Start a producer to send messages to a topic:
 
 	kubectl -n default exec -ti testclient -- /usr/bin/kafka-console-producer --broker-list my-kafka-kafka-headless:9092 --topic test1
 
-Documentation
+## Documentation
 
 - [Apache Kafka](http://kafka.apache.org/documentation/)
 - [Confluent](https://docs.confluent.io/current/)
