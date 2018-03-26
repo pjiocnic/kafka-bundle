@@ -4,9 +4,9 @@ global:
       enabled: true
     zookeeper:
       enabled: true
-    ## Should not be enabled if external is set to true	
+    ## Should not be enabled if external is set to true
     kafkaClient:
-      enabled: false
+      enabled: true
 
 # ------------------------------------------------------------------------------
 # Kafka:
