@@ -68,7 +68,7 @@ Install Kafka Manager
 
 Port forward the Kafka Manager dashboard:
 
-	export POD_NAME=$(kubectl get pods --namespace default -l "app=kafka-manager,release=my-kafka-manager" -o jsonpath="{.items[0].metadata.name}")
+	export POD_NAME=$(kubectl get pods --namespace default -l "app=kafka-manager" -o jsonpath="{.items[0].metadata.name}")
 
 	kubectl port-forward $POD_NAME 8080:9000
 
