@@ -1,5 +1,7 @@
 # Kafka on Kubernetes MVP
 
+This chart is an [umbrella chart](https://docs.helm.sh/developing_charts/#complex-charts-with-many-dependencies) with subcharts for Kafka, ZooKeeper, a Kafka test client, and the Kafka Manager dashboard.
+
 ## Kafka & ZooKeeper
 
 In Docker for Mac, set resources available to Docker to at least:
