@@ -8,6 +8,9 @@ dependencies:
 - name: kafka-manager
   version: 1.0.0
   repository: "file://charts/kafka-manager"
+- name: kafka-monitor
+  version: 0.0.1
+  repository: "file://charts/kafka-monitor"
 - name: kafkaClient
   version: 0.0.0
   repository: "file://charts/kafka-client"
