@@ -76,13 +76,18 @@ Open the Kafka Manager dashboard in your browser:
 
 	open http://127.0.0.1:8080
 
-Install Kubernetes dashboard (if needed):
+Install Kubernetes dashboard chart (if needed):
 
-	kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+	helm install stable/kubernetes-dashboard
 
 Start Kubernetes dashboard:
 
-	kubectl proxy
+	export POD_NAME=$(kubectl get pods -n default -l "app=kubernetes-dashboard,release=dangling-ocelot" -o jsonpath="{.items[0].metadata.name}")
+	kubectl -n default port-forward $POD_NAME 8443:8443
+
+Open Kubernetes dashboard
+
+	open https://127.0.0.1:8443/
 
 Check status:
 
