@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: astronomerio/kafka-monitor
+  tag: 0.1
   pullPolicy: IfNotPresent
 
 service:
