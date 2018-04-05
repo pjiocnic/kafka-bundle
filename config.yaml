@@ -1,4 +1,28 @@
+# global:
+#   modules:
+#     kafkaClient:
+#       enabled: false
+#     kafka:
+#       enabled: false
+#     zookeeper:
+#       enabled: false
+
+zookeeper:
+  enabled: true
+  persistence:
+    enabled: false
+  # resources:
+  #   requests:
+  #     cpu: "500m"
+  #     memory: "0.5Gi"
+  #   limits:
+  #     cpu: 1
+  #     memory: "0.5Gi"
+  # persistence:
+  #   size: "0.3Gi"
+
 kafka:
+  enabled: false
   resources:
     requests:
       cpu: 250m
@@ -7,4 +31,19 @@ kafka:
       cpu: 500m
       memory: 1Gi
   persistence:
-    size: "1Gi"
+    enabled: false
+    # size: "1Gi"
+  external:
+    enabled: false
+  zookeeper:
+    enabled: false
+
+kafkaClient:
+  enabled: false
+  # enabled: true
+
+kafka-manager:
+  enabled: false
+
+kafka-monitor:
+  enabled: false
