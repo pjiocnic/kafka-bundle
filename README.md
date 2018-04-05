@@ -115,9 +115,13 @@ Start a producer to send messages to a topic:
 
 ## Kafka Monitor
 
+[Kafka Monitor](https://github.com/linkedin/kafka-monitor) is a framework and dashboard from LinkedIn for testing and monitoring the availability of Kafka clusters.
+
+Note: The pre-built image is available at <https://hub.docker.com/r/astronomerio/kafka-monitor/>.  The instructions below are for if you want to update this or build it yourself.
+
 ### How to build Kafka Monitor
 
-Install Java build dependencies, create the docker image for [Kafka Monitor](https://github.com/linkedin/kafka-monitor), and push it to a repository on your Docker registry.
+Install Java build dependencies, create the docker image for Kafka Monitor, and push it to a repository on your Docker registry.
 
 #### Setup
 
