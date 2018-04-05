@@ -37,7 +37,9 @@ spec:
       containers:
       - name: {{ template "zookeeper.name" . }}-server
         imagePullPolicy: {{ .Values.imagePullPolicy }}
-        image: gcr.io/google_samples/k8szk:v2
+        # image: gcr.io/google_samples/k8szk:v2
+        # image: confluentinc/cp-zookeeper:4.0.0-3
+        image: confluentinc/cp-zookeeper:latest
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:
@@ -72,22 +74,22 @@ spec:
           value: "{{ .Values.serverPort }}"
         - name: ZK_ELECTION_PORT
           value: "{{ .Values.leaderElectionPort }}"
-        command:
-        - sh
-        - -c
-        - zkGenConfig.sh && exec zkServer.sh start-foreground
-        readinessProbe:
-          exec:
-            command:
-            - "zkOk.sh"
-          initialDelaySeconds: {{ .Values.probeInitialDelaySeconds }}
-          timeoutSeconds: {{ .Values.probeTimeoutSeconds }}
-        livenessProbe:
-          exec:
-            command:
-            - "zkOk.sh"
-          initialDelaySeconds: {{ .Values.probeInitialDelaySeconds }}
-          timeoutSeconds: {{ .Values.probeTimeoutSeconds }}
+        # command:
+        # - sh
+        # - -c
+        # - zkGenConfig.sh && exec zkServer.sh start-foreground
+        # readinessProbe:
+        #   exec:
+        #     command:
+        #     - "zkOk.sh"
+        #   initialDelaySeconds: {{ .Values.probeInitialDelaySeconds }}
+        #   timeoutSeconds: {{ .Values.probeTimeoutSeconds }}
+        # livenessProbe:
+        #   exec:
+        #     command:
+        #     - "zkOk.sh"
+        #   initialDelaySeconds: {{ .Values.probeInitialDelaySeconds }}
+        #   timeoutSeconds: {{ .Values.probeTimeoutSeconds }}
         volumeMounts:
         - name: datadir
           mountPath: /var/lib/zookeeper
