@@ -22,8 +22,6 @@ Which is equivalent to:
 
 	helm delete my-release
 
----
-
 ## Kafka & ZooKeeper
 
 In Docker for Mac, set resources available to Docker to at least:
