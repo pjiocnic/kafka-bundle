@@ -1,12 +1,12 @@
-global:
-  modules:
-    kafka:
-      enabled: true
-    zookeeper:
-      enabled: true
-    ## Should not be enabled if external is set to true
-    kafkaClient:
-      enabled: true
+# global:
+#   modules:
+#     kafka:
+#       enabled: true
+#     zookeeper:
+#       enabled: true
+#     ## Should not be enabled if external is set to true
+#     kafkaClient:
+#       enabled: true
 
 # ------------------------------------------------------------------------------
 # Kafka:
