@@ -6,6 +6,7 @@ This chart is an [umbrella chart](https://docs.helm.sh/developing_charts/#comple
 
 - [Kafka Bundle Quickstart](docs/quickstart.md)
 - [Kafka & ZooKeeper Setup](docs/setup.md)
+- [Kafka Manager Setup](docs/kafka-manager.md)
 - [Kafka Dashboards](docs/dashboards.md)
 - [ZooKeeper Resources](docs/zookeeper.md)
 
