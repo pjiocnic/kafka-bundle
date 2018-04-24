@@ -17,7 +17,15 @@ The original source is outdated and no longer maintained — we've forked and u
 
 	git clone https://github.com/astronomerio/kafka-manager-docker.git
 	cd kafka-manager-docker
-	docker build .
+
+	# (change 0.0.1 to desired tag)
+	IMAGE=astronomerio/kafka-manager
+	TAG=0.0.1
+
+	docker build -t $IMAGE -t $IMAGE:$TAG .
+
+	# (optional)
+	docker push $IMAGE:$TAG
 
 ## Option 2 - Kafka Manager (manual)
 
