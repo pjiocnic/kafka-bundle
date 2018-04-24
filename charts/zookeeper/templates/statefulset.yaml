@@ -37,7 +37,7 @@ spec:
       containers:
       - name: {{ template "zookeeper.name" . }}-server
         imagePullPolicy: {{ .Values.imagePullPolicy }}
-        image: confluentinc/cp-zookeeper:latest
+        image: confluentinc/cp-zookeeper:4.1.0
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:
