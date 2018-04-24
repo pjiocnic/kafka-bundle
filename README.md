@@ -1,6 +1,6 @@
 # Kafka Bundle
 
-This chart is an [umbrella chart](https://docs.helm.sh/developing_charts/#complex-charts-with-many-dependencies) with subcharts to run Kafka, ZooKeeper, a Kafka test client, and the Kafka Manager dashboard on Kubernetes.
+**Kafka Bundle** is an [umbrella chart](https://docs.helm.sh/developing_charts/#complex-charts-with-many-dependencies) with subcharts to run Kafka, ZooKeeper, a Kafka test client, and the Kafka Manager dashboard on Kubernetes.
 
 ## Docs
 
