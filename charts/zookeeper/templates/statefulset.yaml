@@ -37,8 +37,6 @@ spec:
       containers:
       - name: {{ template "zookeeper.name" . }}-server
         imagePullPolicy: {{ .Values.imagePullPolicy }}
-        # image: gcr.io/google_samples/k8szk:v2
-        # image: confluentinc/cp-zookeeper:4.0.0-3
         image: confluentinc/cp-zookeeper:latest
         resources:
 {{ toYaml .Values.resources | indent 10 }}
