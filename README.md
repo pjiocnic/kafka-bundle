@@ -9,6 +9,11 @@ This chart is an [umbrella chart](https://docs.helm.sh/developing_charts/#comple
 - [Kafka Dashboards](docs/dashboards.md)
 - [ZooKeeper Resources](docs/zookeeper.md)
 
+## Related Repos
+
+- [astronomerio/kafka-manager-docker](https://github.com/astronomerio/kafka-manager-docker) - Kafka Manager dockerized
+- [confluentinc/cp-docker-images](https://github.com/confluentinc/cp-docker-images) - Confluent Docker images
+
 ## External Docs
 
 - [Apache Kafka](http://kafka.apache.org/documentation/)
